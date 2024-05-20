@@ -1,0 +1,274 @@
+Конечно! Вот обновлённый HTML-код с более современным и высокотехнологичным дизайном для научной анкеты:
+
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета для исследования эффективности тренингов по конфликт-менеджменту</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 50px auto;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .main {
+            padding: 20px;
+        }
+        h2 {
+            color: #6a11cb;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        label {
+            color: #333;
+            display: block;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 6px 0 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #6a11cb;
+            box-shadow: 0 0 8px rgba(106, 17, 203, 0.2);
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #6a11cb;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #2575fc;
+        }
+        .checkbox-group,
+        .radio-group {
+            margin-bottom: 20px;
+        }
+        .checkbox-group label,
+        .radio-group label {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+
+<header class="container">
+    <h1>Анкета для исследования эффективности тренингов по конфликт-менеджменту</h1>
+</header>
+
+<div class="container main">
+    <form action="/submit-form" method="post">
+        <input type="hidden" name="csrf_token" value="your_csrf_token_here">
+
+        <h2>Часть 1: Общая информация</h2>
+        <label for="age">Возраст:</label>
+        <select id="age" name="age">
+            <option value="18-25">18-25</option>
+            <option value="26-35">26-35</option>
+            <option value="36-45">36-45</option>
+            <option value="46-55">46-55</option>
+            <option value="56+">56 и старше</option>
+        </select>
+
+        <label for="gender">Пол:</label>
+        <select id="gender" name="gender">
+            <option value="male">Мужской</option>
+            <option value="female">Женский</option>
+            <option value="other">Другой</option>
+        </select>
+
+        <label for="department">Департамент/Отдел:</label>
+        <input type="text" id="department" name="department">
+
+        <label for="position">Должность:</label>
+        <select id="position" name="position">
+            <option value="leader">Руководитель</option>
+            <option value="manager">Менеджер</option>
+            <option value="employee">Сотрудник без руководящих полномочий</option>
+        </select>
+
+        <label for="experience">Стаж работы в организации:</label>
+        <select id="experience" name="experience">
+            <option value="less_than_6_months">Менее 6 месяцев</option>
+            <option value="6-12_months">6-12 месяцев</option>
+            <option value="1-3_years">1-3 года</option>
+            <option value="more_than_3_years">Более 3 лет</option>
+        </select>
+
+        <h2>Часть 2: Опыт конфликтов на рабочем месте</h2>
+        <label for="conflict_frequency">Как часто Вы сталкиваетесь с конфликтами на рабочем месте?</label>
+        <select id="conflict_frequency" name="conflict_frequency">
+            <option value="never">Никогда</option>
+            <option value="rarely">Редко</option>
+            <option value="sometimes">Иногда</option>
+            <option value="often">Часто</option>
+            <option value="very_often">Очень часто</option>
+        </select>
+
+        <label for="conflict_types">Какие типы конфликтов наиболее часто встречаются в Вашей организации? (можно выбрать несколько вариантов)</label>
+        <div class="checkbox-group">
+            <input type="checkbox" name="conflict_types" value="interpersonal"> Межличностные конфликты<br>
+            <input type="checkbox" name="conflict_types" value="interdepartmental"> Конфликты между отделами<br>
+            <input type="checkbox" name="conflict_types" value="leadership"> Конфликты с руководством<br>
+            <input type="checkbox" name="conflict_types" value="resource_distribution"> Конфликты из-за распределения ресурсов<br>
+            <input type="checkbox" name="conflict_types" value="other"> Другие (укажите) <input type="text" name="conflict_types_other"><br>
+        </div>
+
+        <label for="conflict_level">Как Вы оцениваете уровень конфликтов в Вашей организации?</label>
+        <select id="conflict_level" name="conflict_level">
+            <option value="very_low">Очень низкий</option>
+            <option value="low">Низкий</option>
+            <option value="medium">Средний</option>
+            <option value="high">Высокий</option>
+            <option value="very_high">Очень высокий</option>
+        </select>
+
+        <label for="conflict_resolution_methods">Какие методы разрешения конфликтов используются в Вашей организации? (можно выбрать несколько вариантов)</label>
+        <div class="checkbox-group">
+            <input type="checkbox" name="conflict_resolution_methods" value="negotiation"> Переговоры<br>
+            <input type="checkbox" name="conflict_resolution_methods" value="mediation"> Медиация<br>
+            <input type="checkbox" name="conflict_resolution_methods" value="facilitation"> Фасилитация<br>
+            <input type="checkbox" name="conflict_resolution_methods" value="management_involvement"> Обращение к руководству<br>
+            <input type="checkbox" name="conflict_resolution_methods" value="other"> Другие (укажите) <input type="text" name="conflict_resolution_methods_other"><br>
+        </div>
+
+        <h2>Часть 3: Оценка тренингов по конфликт-менеджменту</h2>
+        <label for="training_participation">Участвовали ли Вы в тренингах по конфликт-менеджменту, организованных в Вашей организации?</label>
+        <select id="training_participation" name="training_participation">
+            <option value="yes">Да</option>
+            <option value="no">Нет</option>
+        </select>
+
+        <div id="training_effectiveness_section" style="display: none;">
+            <label for="training_effectiveness">Как Вы оцениваете эффективность проведенных тренингов по конфликт-менеджменту?</label>
+            <select id="training_effectiveness" name="training_effectiveness">
+                <option value="very_low">Очень низкая</option>
+                <option value="low">Низкая</option>
+                <option value="medium">Средняя</option>
+                <option value="high">Высокая</option>
+                <option value="very_high">Очень высокая</option
+
+>
+            </select>
+
+            <label for="training_usefulness">Какие аспекты тренинга Вы считаете наиболее полезными? (можно выбрать несколько вариантов)</label>
+            <div class="checkbox-group">
+                <input type="checkbox" name="training_usefulness" value="theoretical_part"> Теоретическая часть<br>
+                <input type="checkbox" name="training_usefulness" value="practical_exercises"> Практические упражнения<br>
+                <input type="checkbox" name="training_usefulness" value="role_plays"> Ролевые игры<br>
+                <input type="checkbox" name="training_usefulness" value="group_discussions"> Групповые обсуждения<br>
+                <input type="checkbox" name="training_usefulness" value="feedback"> Обратная связь<br>
+            </div>
+
+            <label for="post_training_ability">Как Вы оцениваете свою способность управлять конфликтами после участия в тренинге?</label>
+            <select id="post_training_ability" name="post_training_ability">
+                <option value="very_low">Очень низкая</option>
+                <option value="low">Низкая</option>
+                <option value="medium">Средняя</option>
+                <option value="high">Высокая</option>
+                <option value="very_high">Очень высокая</option>
+            </select>
+
+            <label for="conflict_level_change">Как Вы оцениваете изменения в уровне конфликтов в Вашей организации после проведения тренингов?</label>
+            <select id="conflict_level_change" name="conflict_level_change">
+                <option value="much_worse">Значительно ухудшилось</option>
+                <option value="worse">Ухудшилось</option>
+                <option value="no_change">Не изменилось</option>
+                <option value="better">Улучшилось</option>
+                <option value="much_better">Значительно улучшилось</option>
+            </select>
+        </div>
+
+        <h2>Часть 4: Эмоциональный интеллект и управление конфликтами</h2>
+        <label for="emotional_intelligence">Как Вы оцениваете свой уровень эмоционального интеллекта?</label>
+        <select id="emotional_intelligence" name="emotional_intelligence">
+            <option value="very_low">Очень низкий</option>
+            <option value="low">Низкий</option>
+            <option value="medium">Средний</option>
+            <option value="high">Высокий</option>
+            <option value="very_high">Очень высокий</option>
+        </select>
+
+        <label for="emotional_intelligence_impact">Как Вы оцениваете влияние своего эмоционального интеллекта на управление конфликтами?</label>
+        <select id="emotional_intelligence_impact" name="emotional_intelligence_impact">
+            <option value="very_negative">Очень негативное</option>
+            <option value="negative">Негативное</option>
+            <option value="neutral">Нейтральное</option>
+            <option value="positive">Позитивное</option>
+            <option value="very_positive">Очень позитивное</option>
+        </select>
+
+        <label for="important_ei_skills">Какие навыки эмоционального интеллекта Вы считаете наиболее важными для управления конфликтами? (можно выбрать несколько вариантов)</label>
+        <div class="checkbox-group">
+            <input type="checkbox" name="important_ei_skills" value="self_awareness"> Самоосознание<br>
+            <input type="checkbox" name="important_ei_skills" value="self_regulation"> Саморегуляция<br>
+            <input type="checkbox" name="important_ei_skills" value="motivation"> Мотивация<br>
+            <input type="checkbox" name="important_ei_skills" value="empathy"> Эмпатия<br>
+            <input type="checkbox" name="important_ei_skills" value="social_skills"> Социальные навыки<br>
+        </div>
+
+        <h2>Часть 5: Дополнительные комментарии</h2>
+        <label for="improvement_recommendations">Какие рекомендации Вы могли бы дать для улучшения управления конфликтами в Вашей организации?</label>
+        <textarea id="improvement_recommendations" name="improvement_recommendations" rows="4"></textarea>
+
+        <label for="future_training_topics">Какие темы Вы бы хотели видеть в будущих тренингах по конфликт-менеджменту?</label>
+        <textarea id="future_training_topics" name="future_training_topics" rows="4"></textarea>
+
+        <label for="additional_comments">Ваши дополнительные комментарии и предложения:</label>
+        <textarea id="additional_comments" name="additional_comments" rows="4"></textarea>
+
+        <input type="submit" value="Отправить">
+    </form>
+</div>
+
+<script>
+    document.getElementById('training_participation').addEventListener('change', function() {
+        var display = this.value === 'yes' ?
